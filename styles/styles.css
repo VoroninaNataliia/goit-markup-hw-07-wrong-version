@@ -73,21 +73,21 @@ a,
     line-height: 1.19;
 }
 
-.logo-brand-color {
+.logo__brand-color {
     color: var(--brand-color);
 }
 
-.logo-studio-header {
+.logo__black {
     color: var(--brand-color-studio);
 }
 
-.logo-studio-footer {
+.logo__white {
     color: var(--brand-color-footer);
 }
 
 /*links color+font styles*/
 
-.navigation__links {
+.navigation__link {
     display: inline-block;
     
     padding: 32px 0px;
@@ -100,8 +100,8 @@ a,
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation__links:hover, 
-.navigation__links:focus,
+.navigation__link:hover, 
+.navigation__link:focus,
 .contacts__link:hover,
 .contacts__link:focus,
 .footer__contact:hover,
@@ -109,10 +109,8 @@ a,
     color: var(--brand-color);
 }
 
-.navigation__item-current {
+.navigation__link--accent {
     position: relative;
-    display: flex;
-    flex-direction: column;
     color: var(--brand-color)
 }
 
@@ -165,7 +163,7 @@ a,
     margin-right: 318px;
 }
 
-.navigation__pages {
+.navigation__list {
     display: flex;
     align-items: center;    
 }
@@ -175,7 +173,7 @@ a,
 }
     
 
-.navigation__item-current::after { 
+.navigation__link--accent::after { 
     content: "";
     position: absolute;
 
@@ -209,14 +207,15 @@ a,
     margin-bottom: auto;
 
     margin-right: 10px;  
-}
-
-.contacts__icon {
     fill: var(--primery-text-color);
 }
 
-.contacts__link:hover .contacts__icon,
-.contacts__link:focus .contacts__icon {
+.contacts__icon {
+    
+}
+
+.contacts__link:hover .contacts__svg,
+.contacts__link:focus .contacts__svg {
     fill: var(--brand-color);
 }
 
@@ -332,7 +331,7 @@ a,
 
 /* section advantages */
 
-.advantages {
+.advantages-list {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -379,7 +378,7 @@ a,
     margin-bottom: 50px;
 }
 
-.development__container {
+.development__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -489,7 +488,7 @@ a,
 }
 
 
-.social__reference {
+.social__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,27 +505,27 @@ a,
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon{
+.social__svg{
     fill: #AFB1B8;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.social__reference:hover .social-icon,
-.social__reference:focus .social-icon {
+.social__link:hover .social__svg,
+.social__link:focus .social__svg {
     fill: var(--additional-text-color);
 }
 
-.social__reference:hover,
-.social__reference:focus  {
+.social__link:hover,
+.social__link:focus  {
     background-color: var(--brand-color);
     outline: transparent;
 }
 
 /* section client */
 
-.client {
+.client-list {
     display: flex;
     flex-wrap: nowrap;
     gap: 30px;
@@ -542,7 +541,7 @@ a,
       
 }
 
-.client__reference {
+.client__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,19 +558,19 @@ a,
         
 }
 
-.client-icon {
+.client__svg {
     fill: #AFB1B8;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__reference:hover .client-icon,
-.client__reference:focus .client-icon{
+.client__link:hover .client__svg,
+.client__link:focus .client__svg{
     fill: var(--brand-color);
 }
 
-.client__reference:hover,
-.client__reference:focus {
+.client__link:hover,
+.client__link:focus {
     border: 1px solid var(--brand-color);
     outline: transparent;   
 }
@@ -622,11 +621,11 @@ footer {
     padding: 60px 0px;
 }
 
-.footer__social {
+.footer-social {
     margin-right: auto;
 }
 
-.footer__info {
+.footer-submit__info {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.17;
@@ -636,22 +635,22 @@ footer {
     margin-bottom: 20px;
 }
 
-.social-icon-footer {
+.social__svg--footer {
     fill: var(--brand-color-footer);    
 }
 
-.social__reference-footer {   
+.social__link--footer {   
     background-color: rgba(255, 255, 255, 0.1);
 }
-.social__reference-footer:focus {
+.social__link--footer:focus {
     outline: transparent;
 }
 
-.submit-form {
+.footer-submit__form {
     display: flex;
 }
 
-.submit-input {
+.footer-submit__input {
     width: 358px;
     min-height: 50px;
     padding-left: 15px;
@@ -666,7 +665,7 @@ footer {
 
 }
 
-.submit-input:focus {
+.footer-submit__input:focus {
     outline: transparent;
     border-color: var(--brand-color);
 }
@@ -693,7 +692,7 @@ footer {
     background-color: #188CE8;
 }
 
-.submit-text {
+.submit__text {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -701,7 +700,7 @@ footer {
     color: var(--additional-text-color);
 }
 
-.submit-icon {
+.submit__icon {
     margin-left: 10px;
     fill: var(--additional-text-color);
 }
@@ -717,7 +716,7 @@ footer {
 
 }
 
-.filter__container {
+.filter__list {
     display: flex;
     justify-content: center;
 
@@ -753,24 +752,24 @@ footer {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);  
 }
 
-.project-container {
+.project__list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.project-item:hover,
-.project-item:focus {
+.project__link:hover,
+.project__link:focus {
     outline: transparent;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-section {
+.project__item {
     flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
-.project-item {
+.project__link {
     display: flex;
     flex-direction: column;
 
@@ -780,14 +779,14 @@ footer {
     color: var(--main-text-color);
 } 
 
-.progect-thumb {
+.progect__thumb {
     position: relative; 
 
     overflow: hidden;      
 }
 
 
-.project-discription {
+.project__description {
     position: absolute;
 
     bottom: 0px;
@@ -805,19 +804,19 @@ footer {
     background-color: rgba(33, 150, 243, 0.9);
 }
 
-.project-item:hover .project-discription,
-.project-item:focus .project-discription {  
+.project__link:hover .project__description,
+.project__link:focus .project__description {  
     transform: translateY(0px);
 }  
 
-.project-info { 
+.project__info { 
     padding: 20px 24px;
 
     border: 1px solid#EEEEEE;
     border-top: none;
 }
 
-.project-name {
+.project__name {
     margin-bottom: 4px;
 
     font-size: 18px;
@@ -825,7 +824,7 @@ footer {
     letter-spacing: 0.06em;
 }
 
-.project-type {
+.project__type {
     font-size: 16px;
     line-height: 1.88;
     color: var(--primery-text-color);
